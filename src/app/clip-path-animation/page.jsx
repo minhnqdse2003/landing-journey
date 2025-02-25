@@ -1,23 +1,44 @@
 import React from "react";
 import "./style.css";
+import Image from "next/image";
+import { svg } from "../../../public/svg";
+import "@fontsource/courier-prime";
 
 const Page = () => {
   return (
     <div className="w-full h-[100vh] flex justify-center items-center">
-      <svg
-        width="70%"
-        height="70%"
-        viewBox="0 0 4588 3841"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M4588 380C4588 170.132 4417.87 0 4208 0H3039C2829.13 0 2659 170.132 2659 380V786C2659 1023.48 2466.48 1216 2229 1216H380C170.132 1216 0 1386.13 0 1596V3461C0 3670.87 170.132 3841 380 3841H4208C4417.87 3841 4588 3670.87 4588 3461V380Z"
-          fill="white"
-        />
-      </svg>
+      <div className="w-fit h-[80vh] bgGradient flex flex-col justify-end relative">
+        <div className="w-fit h-3/4">
+          <Image
+            className="w-full h-full object-contain"
+            src={svg.clipPath}
+            width={500}
+            height={500}
+          />
+        </div>
+        <p className="absolute top-[50%] left-1 text-left whitespace-nowrap ">
+          Lorem ipsum dolor sit amet
+        </p>
+        <p className="absolute top-[50%] right-1 text-right">
+          Lorem ipsum dolor sit amet
+        </p>
+        <h3 className="absolute top-0 left-1/2 transform translate-x-[-50%] text-white/65 text-xl tracking-widest">
+          new collection
+        </h3>
+
+        <div className="absolute bottom-4 w-full left-[50%] text-[#F2A875] container text-center flex flex-col items-center justify-center">
+          <h1 className="uppercase break-words whitespace-pre-wrap text-3xl w-1/2 mb-4 font-medium">
+            gradient template
+          </h1>
+          <h3 className=" text-xl tracking-widest">new collection</h3>
+          <p className="text-[0.5rem] px-16">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
