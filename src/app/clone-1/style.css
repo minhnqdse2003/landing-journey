@@ -1,0 +1,61 @@
+.body-wrapper {
+  font-family: "Fraunces Variable", serif;
+  min-height: 100vh;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  .imageWrapper {
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 120%);
+    perspective: 1000;
+  }
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(40%, -70%);
+    width: 35%;
+    .fade {
+      opacity: 0;
+    }
+    .slideUp {
+      transform: translateY(100%);
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3.75rem;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+    p:last-of-type {
+      margin-top: 0.5rem;
+    }
+  }
+  .title {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 2rem;
+  }
+}
+
+.hero-section::after {
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: #181303;
+  opacity: 0;
+}
