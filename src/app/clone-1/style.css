@@ -4,8 +4,10 @@
 }
 
 .hero-section {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
 
   .imageWrapper {
@@ -48,14 +50,9 @@
   }
 }
 
-.hero-section::after {
-  content: "";
-  left: 0;
-  top: 0;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: 20;
+.body-contents {
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
   background-color: #181303;
-  opacity: 0;
 }
