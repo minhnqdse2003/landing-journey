@@ -54,5 +54,20 @@
   min-height: 100vh;
   position: relative;
   z-index: 2;
+}
+
+.body-contents .preview {
   background-color: #181303;
+  padding: calc(10vh + 4rem) 4rem;
+  text-align: center;
+}
+
+.body-contents .main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+}
+
+.list {
+  list-style-type: "+ ";
 }
